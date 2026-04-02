@@ -1,52 +1,62 @@
 /**
- * Home component
+ * Home / Hero component
  *
- * The section at the top of the page to display image of your
- * choice, name and title that describes your career focus.
+ * Full-screen hero with value proposition and primary CTAs.
  */
-
 import React from "react";
-import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 
-/**
- * Home background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- *
- * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
- */
-import image from "../images/woman-with-tablet.jpg";
-
-const imageAltText = "Adult female in office setting leaning against a glass wall while holding a platinum Microsoft Surface Pro 7 in tablet mode preparing to write with Microsoft Surface Pen";
-
-const Home = ({ name, title }) => {
+const Home = ({ name, title, email }) => {
   return (
-    <section id="home" className="min-height">
-      <img className="background" src={image} alt="" />
-      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
-        <h1>{name}</h1>
-        <h2>{title}</h2>
-      </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+    <section id="home" className="hero">
+      <div className="container">
+        <div className="hero-content">
+          <div className="hero-badge">
+            <span>🤖</span> Available for new projects
+          </div>
+
+          <h1 className="hero-title">
+            Hi, I&apos;m <span className="highlight">{name}</span>
+            <br />
+            {title}
+          </h1>
+
+          <p className="hero-description">
+            I build fast, modern Android apps for startups and businesses — using
+            Kotlin, Jetpack Compose, and Firebase. From idea to Play Store, I
+            handle the full lifecycle.
+          </p>
+
+          <div className="hero-cta">
+            <a href="#projects" className="btn btn-primary">
+              View My Work
+            </a>
+            <a href={`mailto:${email}`} className="btn btn-outline">
+              Get in Touch
+            </a>
+          </div>
+
+          <div className="hero-scroll">
+            <div className="scroll-dot" />
+            Scroll to explore
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 Home.defaultProps = {
-  name: "",
-  title: "",
+  name: "Kaleem",
+  title: "Android Developer",
+  email: "",
 };
 
 Home.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  email: PropTypes.string,
 };
 
 export default Home;
+

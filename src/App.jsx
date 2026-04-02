@@ -1,53 +1,56 @@
 /**
- * Application component
+ * App component
  *
- * To contain application wide settings, routes, state, etc.
+ * Root of the portfolio application.
+ *
+ * ── How to customise ──────────────────────────────────────────
+ * 1. Update siteProps below with your real name, email, and social handles.
+ * 2. Add / edit projects in src/data/projects.js — no changes needed here.
+ * ──────────────────────────────────────────────────────────────
  */
 
 import React from "react";
 
-import About from "./Components/About";
-import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
+import Services from "./Components/Services";
 import Portfolio from "./Components/Portfolio";
+import Skills from "./Components/Skills";
+import About from "./Components/About";
+import Footer from "./Components/Footer";
 
 import "./styles.css";
 
 /**
- * This object represents your information. The project is set so that you
- * only need to update these here, and values are passed a properties to the
- * components that need that information.
- *
- * Update the values below with your information.
- *
- * If you don't have one of the social sites listed, leave it as an empty string.
+ * Update the values below with your own information.
+ * Leave a field as an empty string ("") to hide that link.
  */
 const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
-  email: "alex@example.com",
-  gitHub: "microsoft",
-  instagram: "microsoft",
-  linkedIn: "satyanadella",
-  medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
+  name: "Kaleem",
+  title: "Android Developer",
+  email: "kaleem@example.com",   // ← replace with your real email
+  gitHub: "kaleem04",            // ← your GitHub username
+  linkedIn: "",                  // ← your LinkedIn profile slug, or ""
 };
-
-const primaryColor = "#4E567E";
-const secondaryColor = "#D2F1E4";
 
 const App = () => {
   return (
     <div id="main">
       <Header />
-      <Home name={siteProps.name} title={siteProps.title} />
-      <About />
+      <Home name={siteProps.name} title={siteProps.title} email={siteProps.email} />
+      <Services />
       <Portfolio />
-      <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+      <Skills />
+      <About />
+      <Footer
+        name={siteProps.name}
+        email={siteProps.email}
+        gitHub={siteProps.gitHub}
+        linkedIn={siteProps.linkedIn}
+      />
     </div>
   );
 };
 
 export default App;
+
