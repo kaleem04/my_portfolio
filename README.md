@@ -1,17 +1,104 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=526682619)
+# Kaleem | Android Developer Portfolio
 
-# JavaScript Portfolio Site with GitHub Codespaces and Copilot
+A professional Android developer portfolio built with **React + Parcel**, deployed to **GitHub Pages**.
 
-> View these instructions in [Spanish](/translations/es/README.md) or [Portuguese](/translations/pt-BR/README.md)
+🌐 **Live site:** https://kaleem04.github.io/my_portfolio
 
-_Create, customize and deploy your own portfolio website in minutes._ ✨
+---
 
-In this template repository we have the development environment and base set and ready to go. So that you can immediately launch your [Codespace](https://github.com/features/codespaces/) environment and start customizing your site using [Copilot](https://copilot.github.com) to help you write code faster. 
+## Local development
 
-* **Who is this for?** __Anyone__ looking to create a portfolio site, learn web development, or test out Codespaces.
-* **How much experience do you need?** __Zero__. You decide how much you want to customize based on your experience, and time available.
-* **Tools needed:** _None_. No need to install anything! All you need is a web browser.
-* **Prerequisites:** _None_. This template includes your development environment and deployable web app for you to create your own site.
+```bash
+npm install
+npm run start
+```
+
+Then open http://localhost:1234 in your browser.
+
+---
+
+## Build
+
+```bash
+npm run build        # output goes to /dist
+```
+
+---
+
+## Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+This runs `parcel build --public-url 'https://kaleem04.github.io/my_portfolio'` and pushes the
+`dist/` folder to the `gh-pages` branch. Make sure GitHub Pages is set to serve from the
+`gh-pages` branch in **Settings → Pages**.
+
+---
+
+## How to customise
+
+### Change your name / email / social links
+
+Open `src/App.jsx` and update the `siteProps` object near the top of the file:
+
+```js
+const siteProps = {
+  name: "Kaleem",            // your display name
+  title: "Android Developer",
+  email: "you@example.com",  // used for the mailto: button
+  gitHub: "kaleem04",        // GitHub username
+  linkedIn: "",              // LinkedIn profile slug (or "" to hide)
+};
+```
+
+### Add or edit projects
+
+Open **`src/data/projects.js`** — each object in the array becomes a project card.
+
+```js
+{
+  title: "My App",
+  description: "Short summary of what the app does.",
+  tags: ["Kotlin", "Jetpack Compose", "Hilt"],
+  github: "https://github.com/kaleem04/my-app",   // "" to hide
+  playStore: "",   // full Play Store URL or ""
+  apk: "",         // direct APK / GitHub Release URL or ""
+  demo: "",        // demo video URL or ""
+},
+```
+
+Save the file — the card will appear automatically on the site.
+
+### Change services or skills
+
+- **Services** → `src/Components/Services.jsx` (edit `servicesList`)
+- **Skills** → `src/Components/Skills.jsx` (edit `skillGroups`)
+- **About** text → `src/Components/About.jsx`
+
+---
+
+## Project structure
+
+```
+src/
+├── data/
+│   └── projects.js          ← add/edit your projects here
+├── Components/
+│   ├── Header.jsx            ← sticky navbar
+│   ├── Home.jsx              ← hero section
+│   ├── Services.jsx          ← services cards
+│   ├── Portfolio.jsx         ← project cards (reads data/projects.js)
+│   ├── Skills.jsx            ← tech stack grid
+│   ├── About.jsx             ← about / bio section
+│   └── Footer.jsx            ← contact + footer bar
+├── App.jsx                   ← root component & siteProps config
+├── index.js                  ← React entry point
+├── index.html                ← HTML entry point (title, meta tags)
+└── styles.css                ← global styles & design tokens
+```
+
 
 ## About this portfolio template
 
