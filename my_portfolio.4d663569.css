@@ -549,6 +549,12 @@ img {
   display: flex;
 }
 
+.social-link-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
 .footer-bar {
   background: var(--bg-card);
   border-top: 1px solid var(--border);
