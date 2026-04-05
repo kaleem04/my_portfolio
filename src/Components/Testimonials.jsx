@@ -49,8 +49,8 @@ const Testimonials = () => {
         </p>
 
         <div className="testimonials-grid">
-          {testimonials.map((t) => (
-            <TestimonialCard key={t.name} {...t} />
+          {testimonials.map((t, index) => (
+            <TestimonialCard key={t.name || index} {...t} />
           ))}
         </div>
       </div>

@@ -72,7 +72,13 @@ Home.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   email: PropTypes.string,
-  socials: PropTypes.array,
+  socials: PropTypes.arrayOf(
+    PropTypes.shape({
+      network: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+      label: PropTypes.string,
+    })
+  ),
 };
 
 export default Home;

@@ -77,7 +77,13 @@ Footer.propTypes = {
   email: PropTypes.string,
   gitHub: PropTypes.string,
   linkedIn: PropTypes.string,
-  socials: PropTypes.array,
+  socials: PropTypes.arrayOf(
+    PropTypes.shape({
+      network: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+      label: PropTypes.string,
+    })
+  ),
 };
 
 export default Footer;
