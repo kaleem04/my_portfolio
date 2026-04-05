@@ -27537,6 +27537,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 const Home = ({ name, title, email, profileImage })=>{
+    const resolvedProfileImage = typeof profileImage === "string" ? profileImage : profileImage?.default || profileImage?.src || "";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         id: "home",
         className: "hero",
@@ -27555,14 +27556,14 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: "\uD83E\uDD16"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 16,
+                                        lineNumber: 21,
                                         columnNumber: 15
                                     }, undefined),
                                     " Available for new projects"
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 15,
+                                lineNumber: 20,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27574,19 +27575,19 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: name
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 20,
+                                        lineNumber: 25,
                                         columnNumber: 28
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 21,
+                                        lineNumber: 26,
                                         columnNumber: 15
                                     }, undefined),
                                     title
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 19,
+                                lineNumber: 24,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27594,7 +27595,7 @@ const Home = ({ name, title, email, profileImage })=>{
                                 children: "I build fast, modern Android apps for startups and businesses \u2014 using Kotlin, Jetpack Compose, and Firebase. From idea to Play Store, I handle the full lifecycle."
                             }, void 0, false, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 25,
+                                lineNumber: 30,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27606,7 +27607,7 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: "View My Work"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 32,
+                                        lineNumber: 37,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27615,13 +27616,13 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: "Get in Touch"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 35,
+                                        lineNumber: 40,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 31,
+                                lineNumber: 36,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27631,43 +27632,28 @@ const Home = ({ name, title, email, profileImage })=>{
                                         className: "scroll-dot"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 41,
+                                        lineNumber: 46,
                                         columnNumber: 15
                                     }, undefined),
                                     "Scroll to explore"
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 40,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 14,
+                        lineNumber: 19,
                         columnNumber: 11
                     }, undefined),
-                    profileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    resolvedProfileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "hero-image-card",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: profileImage,
+                            src: resolvedProfileImage,
                             alt: `${name} portrait`,
                             className: "hero-image"
-                        }, void 0, false, {
-                            fileName: "src/Components/Home.jsx",
-                            lineNumber: 48,
-                            columnNumber: 15
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/Components/Home.jsx",
-                        lineNumber: 47,
-                        columnNumber: 13
-                    }, undefined),
-                    !profileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "hero-image-card",
-                        "aria-hidden": "true",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "hero-image hero-image-placeholder"
                         }, void 0, false, {
                             fileName: "src/Components/Home.jsx",
                             lineNumber: 53,
@@ -27677,21 +27663,36 @@ const Home = ({ name, title, email, profileImage })=>{
                         fileName: "src/Components/Home.jsx",
                         lineNumber: 52,
                         columnNumber: 13
+                    }, undefined),
+                    !resolvedProfileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "hero-image-card",
+                        "aria-hidden": "true",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "hero-image hero-image-placeholder"
+                        }, void 0, false, {
+                            fileName: "src/Components/Home.jsx",
+                            lineNumber: 58,
+                            columnNumber: 15
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/Components/Home.jsx",
+                        lineNumber: 57,
+                        columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 13,
+                lineNumber: 18,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/Components/Home.jsx",
-            lineNumber: 12,
+            lineNumber: 17,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Home.jsx",
-        lineNumber: 11,
+        lineNumber: 16,
         columnNumber: 5
     }, undefined);
 };
@@ -27706,7 +27707,10 @@ Home.propTypes = {
     name: (0, _propTypesDefault.default).string.isRequired,
     title: (0, _propTypesDefault.default).string.isRequired,
     email: (0, _propTypesDefault.default).string,
-    profileImage: (0, _propTypesDefault.default).string
+    profileImage: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).object
+    ])
 };
 exports.default = Home;
 var _c;
@@ -28818,14 +28822,14 @@ $RefreshReg$(_c1, "Portfolio");
  *  - screenshot   (string)  Local image import for project preview
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _weatherNowJpg = require("../images/projects/weather-now.jpg");
-var _weatherNowJpgDefault = parcelHelpers.interopDefault(_weatherNowJpg);
-var _taskflowJpg = require("../images/projects/taskflow.jpg");
-var _taskflowJpgDefault = parcelHelpers.interopDefault(_taskflowJpg);
-var _spendsmartJpg = require("../images/projects/spendsmart.jpg");
-var _spendsmartJpgDefault = parcelHelpers.interopDefault(_spendsmartJpg);
-var _chatlinkJpg = require("../images/projects/chatlink.jpg");
-var _chatlinkJpgDefault = parcelHelpers.interopDefault(_chatlinkJpg);
+var _weatherNowOriginalJpg = require("../images/projects/weather-now-original.jpg");
+var _weatherNowOriginalJpgDefault = parcelHelpers.interopDefault(_weatherNowOriginalJpg);
+var _taskflowOriginalJpg = require("../images/projects/taskflow-original.jpg");
+var _taskflowOriginalJpgDefault = parcelHelpers.interopDefault(_taskflowOriginalJpg);
+var _spendsmartOriginalJpg = require("../images/projects/spendsmart-original.jpg");
+var _spendsmartOriginalJpgDefault = parcelHelpers.interopDefault(_spendsmartOriginalJpg);
+var _chatlinkOriginalJpg = require("../images/projects/chatlink-original.jpg");
+var _chatlinkOriginalJpgDefault = parcelHelpers.interopDefault(_chatlinkOriginalJpg);
 const projects = [
     {
         title: "Weather Now",
@@ -28841,7 +28845,7 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _weatherNowJpgDefault.default)
+        screenshot: (0, _weatherNowOriginalJpgDefault.default)
     },
     {
         title: "TaskFlow",
@@ -28857,7 +28861,7 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _taskflowJpgDefault.default)
+        screenshot: (0, _taskflowOriginalJpgDefault.default)
     },
     {
         title: "SpendSmart",
@@ -28873,7 +28877,7 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _spendsmartJpgDefault.default)
+        screenshot: (0, _spendsmartOriginalJpgDefault.default)
     },
     {
         title: "ChatLink",
@@ -28889,12 +28893,12 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _chatlinkJpgDefault.default)
+        screenshot: (0, _chatlinkOriginalJpgDefault.default)
     }
 ];
 exports.default = projects;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../images/projects/weather-now.jpg":"in7aQ","../images/projects/taskflow.jpg":"4y4nf","../images/projects/spendsmart.jpg":"hnRCz","../images/projects/chatlink.jpg":"aOIkD"}],"in7aQ":[function() {},{}],"4y4nf":[function() {},{}],"hnRCz":[function() {},{}],"aOIkD":[function() {},{}],"gGXok":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../images/projects/weather-now-original.jpg":"inVdo","../images/projects/taskflow-original.jpg":"25S8J","../images/projects/spendsmart-original.jpg":"aGFK9","../images/projects/chatlink-original.jpg":"7nlb0"}],"inVdo":[function() {},{}],"25S8J":[function() {},{}],"aGFK9":[function() {},{}],"7nlb0":[function() {},{}],"gGXok":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0e72 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$0e72.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
