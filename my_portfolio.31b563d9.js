@@ -25091,18 +25091,14 @@ const Header = ()=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                     href: "#home",
                     className: "navbar-brand",
-                    children: [
-                        "<",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            children: "Kaleem"
-                        }, void 0, false, {
-                            fileName: "src/Components/Header.jsx",
-                            lineNumber: 22,
-                            columnNumber: 15
-                        }, undefined),
-                        " />"
-                    ]
-                }, void 0, true, {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "Kaleem Ullah"
+                    }, void 0, false, {
+                        fileName: "src/Components/Header.jsx",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
                     fileName: "src/Components/Header.jsx",
                     lineNumber: 21,
                     columnNumber: 9
