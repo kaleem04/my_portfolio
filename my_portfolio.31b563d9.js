@@ -27665,7 +27665,10 @@ const Home = ({ name, title, email, profileImage })=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                             src: resolvedProfileImage,
                             alt: `${name} portrait`,
-                            className: "hero-image"
+                            className: "hero-image",
+                            loading: "eager",
+                            decoding: "async",
+                            fetchPriority: "high"
                         }, void 0, false, {
                             fileName: "src/Components/Home.jsx",
                             lineNumber: 63,
@@ -27683,12 +27686,12 @@ const Home = ({ name, title, email, profileImage })=>{
                             className: "hero-image hero-image-placeholder"
                         }, void 0, false, {
                             fileName: "src/Components/Home.jsx",
-                            lineNumber: 68,
+                            lineNumber: 75,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 67,
+                        lineNumber: 74,
                         columnNumber: 13
                     }, undefined)
                 ]
@@ -28652,39 +28655,55 @@ const getAssetSrc = (asset)=>{
     }
     return "";
 };
-const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, screenshot })=>{
+const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, screenshot, screenshots })=>{
     const screenshotSrc = getAssetSrc(screenshot);
+    const normalizedScreenshots = Array.isArray(screenshots) ? screenshots.map(getAssetSrc).filter(Boolean) : [];
+    const gallery = normalizedScreenshots.length > 0 ? normalizedScreenshots : screenshotSrc ? [
+        screenshotSrc
+    ] : [];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "project-card",
         children: [
-            screenshotSrc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "project-cover",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: screenshotSrc,
-                    alt: `${title} screenshot`,
-                    className: "project-cover-image"
+            gallery.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "project-media-scroll",
+                role: "region",
+                "aria-label": `${title} screenshots`,
+                tabIndex: 0,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "project-media-track",
+                    children: gallery.map((src, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: src,
+                            alt: `${title} screenshot ${index + 1}`,
+                            className: "project-media-image",
+                            loading: "lazy",
+                            decoding: "async"
+                        }, `${title}-shot-${index}`, false, {
+                            fileName: "src/Components/Portfolio.jsx",
+                            lineNumber: 36,
+                            columnNumber: 15
+                        }, undefined))
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 30,
+                    lineNumber: 34,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 29,
+                lineNumber: 33,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: title
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 33,
+                lineNumber: 48,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: description
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 34,
+                lineNumber: 49,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28694,12 +28713,12 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: tag
                     }, tag, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 38,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 36,
+                lineNumber: 51,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28713,7 +28732,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "GitHub"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 46,
+                        lineNumber: 61,
                         columnNumber: 11
                     }, undefined),
                     playStore && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28724,7 +28743,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Play Store"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 51,
+                        lineNumber: 66,
                         columnNumber: 11
                     }, undefined),
                     apk && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28735,7 +28754,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Download APK"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 56,
+                        lineNumber: 71,
                         columnNumber: 11
                     }, undefined),
                     demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28746,19 +28765,19 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Demo \u25B6"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 61,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 44,
+                lineNumber: 59,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 27,
+        lineNumber: 31,
         columnNumber: 5
     }, undefined);
 };
@@ -28775,7 +28794,7 @@ const Portfolio = ()=>{
                     children: "My Work"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 74,
+                    lineNumber: 89,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -28783,7 +28802,7 @@ const Portfolio = ()=>{
                     children: "Featured Projects"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 75,
+                    lineNumber: 90,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28791,7 +28810,7 @@ const Portfolio = ()=>{
                     children: "A selection of Android apps I've designed, architected, and shipped."
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 76,
+                    lineNumber: 91,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28800,23 +28819,23 @@ const Portfolio = ()=>{
                             ...project
                         }, project.title, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 82,
+                            lineNumber: 97,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 80,
+                    lineNumber: 95,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Portfolio.jsx",
-            lineNumber: 73,
+            lineNumber: 88,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 72,
+        lineNumber: 87,
         columnNumber: 5
     }, undefined);
 };
@@ -28851,12 +28870,20 @@ $RefreshReg$(_c1, "Portfolio");
 parcelHelpers.defineInteropFlag(exports);
 var _weatherNowOriginalJpg = require("../images/projects/weather-now-original.jpg");
 var _weatherNowOriginalJpgDefault = parcelHelpers.interopDefault(_weatherNowOriginalJpg);
+var _weatherNowJpg = require("../images/projects/weather-now.jpg");
+var _weatherNowJpgDefault = parcelHelpers.interopDefault(_weatherNowJpg);
 var _taskflowOriginalJpg = require("../images/projects/taskflow-original.jpg");
 var _taskflowOriginalJpgDefault = parcelHelpers.interopDefault(_taskflowOriginalJpg);
+var _taskflowJpg = require("../images/projects/taskflow.jpg");
+var _taskflowJpgDefault = parcelHelpers.interopDefault(_taskflowJpg);
 var _spendsmartOriginalJpg = require("../images/projects/spendsmart-original.jpg");
 var _spendsmartOriginalJpgDefault = parcelHelpers.interopDefault(_spendsmartOriginalJpg);
+var _spendsmartJpg = require("../images/projects/spendsmart.jpg");
+var _spendsmartJpgDefault = parcelHelpers.interopDefault(_spendsmartJpg);
 var _chatlinkOriginalJpg = require("../images/projects/chatlink-original.jpg");
 var _chatlinkOriginalJpgDefault = parcelHelpers.interopDefault(_chatlinkOriginalJpg);
+var _chatlinkJpg = require("../images/projects/chatlink.jpg");
+var _chatlinkJpgDefault = parcelHelpers.interopDefault(_chatlinkJpg);
 const projects = [
     {
         title: "Weather Now",
@@ -28872,7 +28899,11 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _weatherNowOriginalJpgDefault.default)
+        screenshot: (0, _weatherNowOriginalJpgDefault.default),
+        screenshots: [
+            (0, _weatherNowJpgDefault.default),
+            (0, _weatherNowOriginalJpgDefault.default)
+        ]
     },
     {
         title: "TaskFlow",
@@ -28888,7 +28919,11 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _taskflowOriginalJpgDefault.default)
+        screenshot: (0, _taskflowOriginalJpgDefault.default),
+        screenshots: [
+            (0, _taskflowJpgDefault.default),
+            (0, _taskflowOriginalJpgDefault.default)
+        ]
     },
     {
         title: "SpendSmart",
@@ -28904,7 +28939,11 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _spendsmartOriginalJpgDefault.default)
+        screenshot: (0, _spendsmartOriginalJpgDefault.default),
+        screenshots: [
+            (0, _spendsmartJpgDefault.default),
+            (0, _spendsmartOriginalJpgDefault.default)
+        ]
     },
     {
         title: "ChatLink",
@@ -28920,12 +28959,16 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _chatlinkOriginalJpgDefault.default)
+        screenshot: (0, _chatlinkOriginalJpgDefault.default),
+        screenshots: [
+            (0, _chatlinkJpgDefault.default),
+            (0, _chatlinkOriginalJpgDefault.default)
+        ]
     }
 ];
 exports.default = projects;
 
-},{"../images/projects/weather-now-original.jpg":"inVdo","../images/projects/taskflow-original.jpg":"25S8J","../images/projects/spendsmart-original.jpg":"aGFK9","../images/projects/chatlink-original.jpg":"7nlb0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"inVdo":[function() {},{}],"25S8J":[function() {},{}],"aGFK9":[function() {},{}],"7nlb0":[function() {},{}],"5HgaB":[function(require,module,exports,__globalThis) {
+},{"../images/projects/weather-now-original.jpg":"inVdo","../images/projects/taskflow-original.jpg":"25S8J","../images/projects/spendsmart-original.jpg":"aGFK9","../images/projects/chatlink-original.jpg":"7nlb0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../images/projects/weather-now.jpg":"in7aQ","../images/projects/taskflow.jpg":"4y4nf","../images/projects/spendsmart.jpg":"hnRCz","../images/projects/chatlink.jpg":"aOIkD"}],"inVdo":[function() {},{}],"25S8J":[function() {},{}],"aGFK9":[function() {},{}],"7nlb0":[function() {},{}],"in7aQ":[function() {},{}],"4y4nf":[function() {},{}],"hnRCz":[function() {},{}],"aOIkD":[function() {},{}],"5HgaB":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d117 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$d117.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
