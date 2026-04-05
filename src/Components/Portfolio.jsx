@@ -7,8 +7,13 @@
 import React from "react";
 import projects from "../data/projects";
 
-const ProjectCard = ({ title, description, tags, github, playStore, apk, demo }) => (
+const ProjectCard = ({ title, description, tags, image, github, playStore, apk, demo }) => (
   <div className="project-card">
+    {image && (
+      <div className="project-image">
+        <img src={image} alt={`${title} screenshot`} loading="lazy" />
+      </div>
+    )}
     <h3>{title}</h3>
     <p>{description}</p>
 

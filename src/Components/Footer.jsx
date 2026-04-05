@@ -1,13 +1,14 @@
 /**
  * Footer / Contact component
  *
- * Contact CTA with email, GitHub, and LinkedIn links.
+ * Contact CTA with email, GitHub, and LinkedIn links, plus social icon links.
  * Update siteProps in App.jsx to change these values.
  */
 import React from "react";
 import PropTypes from "prop-types";
+import SocialLinks from "./SocialLinks";
 
-const Footer = ({ name, email, gitHub, linkedIn }) => {
+const Footer = ({ name, email, gitHub, linkedIn, socials }) => {
   return (
     <>
       <section id="contact" className="section contact">
@@ -51,11 +52,12 @@ const Footer = ({ name, email, gitHub, linkedIn }) => {
       </section>
 
       <footer className="footer-bar">
-        <div className="container">
+        <div className="container footer-bar-inner">
           <p>
             Built by <span>{name}</span> · Android Developer ·{" "}
             {new Date().getFullYear()}
           </p>
+          <SocialLinks socials={socials} />
         </div>
       </footer>
     </>
@@ -67,6 +69,7 @@ Footer.defaultProps = {
   email: "",
   gitHub: "",
   linkedIn: "",
+  socials: [],
 };
 
 Footer.propTypes = {
@@ -74,6 +77,7 @@ Footer.propTypes = {
   email: PropTypes.string,
   gitHub: PropTypes.string,
   linkedIn: PropTypes.string,
+  socials: PropTypes.array,
 };
 
 export default Footer;

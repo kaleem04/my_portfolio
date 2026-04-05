@@ -566,7 +566,14 @@ img {
   background: var(--bg-card);
   border-top: 1px solid var(--border);
   padding: 1.5rem 0;
-  text-align: center;
+}
+
+.footer-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-bar p {
@@ -576,6 +583,174 @@ img {
 
 .footer-bar span {
   color: var(--accent);
+}
+
+/* ── Social Links ─────────────────────────────────────────────── */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+
+.social-link:hover {
+  border-color: var(--accent);
+  background: rgba(61, 220, 132, 0.1);
+  transform: translateY(-2px);
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(0.7);
+  transition: filter var(--transition);
+}
+
+.social-link:hover img {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(54%) saturate(419%) hue-rotate(97deg) brightness(96%) contrast(93%);
+}
+
+/* ── Hero Two-Column Layout ───────────────────────────────────── */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Project Card Image ───────────────────────────────────────── */
+.project-image {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  aspect-ratio: 16 / 9;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
+
+/* ── Testimonials Section ─────────────────────────────────────── */
+.testimonials {
+  background: var(--bg);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.testimonial-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(61, 220, 132, 0.15);
+  border: 2px solid rgba(61, 220, 132, 0.35);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-avatar span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.testimonial-info strong {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.testimonial-info span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }
 
 /* ── Responsive ───────────────────────────────────────────────── */
@@ -608,6 +783,28 @@ img {
 
   .hero-title {
     font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  /* hero two-column → single column on mobile */
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-image-wrap {
+    order: -1; /* image above text on mobile */
+  }
+
+  .hero-img {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* footer bar stacked on mobile */
+  .footer-bar-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
