@@ -24959,12 +24959,16 @@ var _services = require("./Components/Services");
 var _servicesDefault = parcelHelpers.interopDefault(_services);
 var _portfolio = require("./Components/Portfolio");
 var _portfolioDefault = parcelHelpers.interopDefault(_portfolio);
+var _testimonials = require("./Components/Testimonials");
+var _testimonialsDefault = parcelHelpers.interopDefault(_testimonials);
 var _skills = require("./Components/Skills");
 var _skillsDefault = parcelHelpers.interopDefault(_skills);
 var _about = require("./Components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _footer = require("./Components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _kaleemHeroPng = require("./images/profile/kaleem-hero.png");
+var _kaleemHeroPngDefault = parcelHelpers.interopDefault(_kaleemHeroPng);
 var _stylesCss = require("./styles.css");
 /**
  * Update the values below with your own information.
@@ -24972,6 +24976,7 @@ var _stylesCss = require("./styles.css");
  */ const siteProps = {
     name: "Kaleem",
     title: "Android Developer",
+    heroImage: (0, _kaleemHeroPngDefault.default),
     email: "Kaleem04.dev@gmail.com",
     gitHub: "kaleem04",
     linkedIn: "kaleem-ullah04",
@@ -24983,36 +24988,42 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 40,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {
                 name: siteProps.name,
                 title: siteProps.title,
-                email: siteProps.email
+                email: siteProps.email,
+                profileImage: siteProps.heroImage
             }, void 0, false, {
-                fileName: "src/App.jsx",
-                lineNumber: 41,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesDefault.default), {}, void 0, false, {
-                fileName: "src/App.jsx",
-                lineNumber: 42,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioDefault.default), {}, void 0, false, {
-                fileName: "src/App.jsx",
-                lineNumber: 43,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skillsDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
                 lineNumber: 44,
                 columnNumber: 7
             }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 50,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 51,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _testimonialsDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 52,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skillsDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 53,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 45,
+                lineNumber: 54,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {
@@ -25023,13 +25034,13 @@ const App = ()=>{
                 X: siteProps.X
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 46,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.jsx",
-        lineNumber: 39,
+        lineNumber: 42,
         columnNumber: 5
     }, undefined);
 };
@@ -25043,7 +25054,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dmKJv":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Components/Testimonials":"5HgaB","./images/profile/kaleem-hero.png":"5B8MN"}],"dmKJv":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$beb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$beb5.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -25077,6 +25088,10 @@ const Header = ()=>{
             href: "#projects"
         },
         {
+            label: "Testimonials",
+            href: "#testimonials"
+        },
+        {
             label: "Skills",
             href: "#skills"
         },
@@ -25097,12 +25112,12 @@ const Header = ()=>{
                         children: "Kaleem Ullah"
                     }, void 0, false, {
                         fileName: "src/Components/Header.jsx",
-                        lineNumber: 22,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/Components/Header.jsx",
-                    lineNumber: 21,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -25115,12 +25130,12 @@ const Header = ()=>{
                                     children: label
                                 }, void 0, false, {
                                     fileName: "src/Components/Header.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 29,
                                     columnNumber: 15
                                 }, undefined)
                             }, label, false, {
                                 fileName: "src/Components/Header.jsx",
-                                lineNumber: 27,
+                                lineNumber: 28,
                                 columnNumber: 13
                             }, undefined)),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -25131,18 +25146,18 @@ const Header = ()=>{
                                 children: "Hire Me"
                             }, void 0, false, {
                                 fileName: "src/Components/Header.jsx",
-                                lineNumber: 34,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Header.jsx",
-                            lineNumber: 33,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.jsx",
-                    lineNumber: 25,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -25152,11 +25167,6 @@ const Header = ()=>{
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                             fileName: "src/Components/Header.jsx",
-                            lineNumber: 45,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
-                            fileName: "src/Components/Header.jsx",
                             lineNumber: 46,
                             columnNumber: 11
                         }, undefined),
@@ -25164,22 +25174,27 @@ const Header = ()=>{
                             fileName: "src/Components/Header.jsx",
                             lineNumber: 47,
                             columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                            fileName: "src/Components/Header.jsx",
+                            lineNumber: 48,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.jsx",
-                    lineNumber: 40,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Header.jsx",
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Header.jsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 5
     }, undefined);
 };
@@ -27521,107 +27536,147 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-const Home = ({ name, title, email })=>{
+const Home = ({ name, title, email, profileImage })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         id: "home",
         className: "hero",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "container",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "hero-content",
+                className: "hero-layout",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "hero-badge",
+                        className: "hero-content",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "\uD83E\uDD16"
-                            }, void 0, false, {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "hero-badge",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: "\uD83E\uDD16"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Home.jsx",
+                                        lineNumber: 16,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    " Available for new projects"
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
                                 lineNumber: 15,
                                 columnNumber: 13
                             }, undefined),
-                            " Available for new projects"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "hero-title",
+                                children: [
+                                    "Hi, I'm ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "highlight",
+                                        children: name
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Home.jsx",
+                                        lineNumber: 20,
+                                        columnNumber: 28
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                        fileName: "src/Components/Home.jsx",
+                                        lineNumber: 21,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    title
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/Home.jsx",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "hero-description",
+                                children: "I build fast, modern Android apps for startups and businesses \u2014 using Kotlin, Jetpack Compose, and Firebase. From idea to Play Store, I handle the full lifecycle."
+                            }, void 0, false, {
+                                fileName: "src/Components/Home.jsx",
+                                lineNumber: 25,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "hero-cta",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        href: "#projects",
+                                        className: "btn btn-primary",
+                                        children: "View My Work"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Home.jsx",
+                                        lineNumber: 32,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        href: `mailto:${email}`,
+                                        className: "btn btn-outline",
+                                        children: "Get in Touch"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Home.jsx",
+                                        lineNumber: 35,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/Home.jsx",
+                                lineNumber: 31,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "hero-scroll",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "scroll-dot"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Home.jsx",
+                                        lineNumber: 41,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    "Scroll to explore"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/Home.jsx",
+                                lineNumber: 40,
+                                columnNumber: 13
+                            }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Home.jsx",
                         lineNumber: 14,
                         columnNumber: 11
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "hero-title",
-                        children: [
-                            "Hi, I'm ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "highlight",
-                                children: name
-                            }, void 0, false, {
-                                fileName: "src/Components/Home.jsx",
-                                lineNumber: 19,
-                                columnNumber: 26
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "src/Components/Home.jsx",
-                                lineNumber: 20,
-                                columnNumber: 13
-                            }, undefined),
-                            title
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/Home.jsx",
-                        lineNumber: 18,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "hero-description",
-                        children: "I build fast, modern Android apps for startups and businesses \u2014 using Kotlin, Jetpack Compose, and Firebase. From idea to Play Store, I handle the full lifecycle."
+                    profileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "hero-image-card",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: profileImage,
+                            alt: `${name} portrait`,
+                            className: "hero-image"
+                        }, void 0, false, {
+                            fileName: "src/Components/Home.jsx",
+                            lineNumber: 48,
+                            columnNumber: 15
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 24,
-                        columnNumber: 11
+                        lineNumber: 47,
+                        columnNumber: 13
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "hero-cta",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                href: "#projects",
-                                className: "btn btn-primary",
-                                children: "View My Work"
-                            }, void 0, false, {
-                                fileName: "src/Components/Home.jsx",
-                                lineNumber: 31,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                href: `mailto:${email}`,
-                                className: "btn btn-outline",
-                                children: "Get in Touch"
-                            }, void 0, false, {
-                                fileName: "src/Components/Home.jsx",
-                                lineNumber: 34,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+                    !profileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "hero-image-card",
+                        "aria-hidden": "true",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "hero-image hero-image-placeholder"
+                        }, void 0, false, {
+                            fileName: "src/Components/Home.jsx",
+                            lineNumber: 53,
+                            columnNumber: 15
+                        }, undefined)
+                    }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 30,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "hero-scroll",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "scroll-dot"
-                            }, void 0, false, {
-                                fileName: "src/Components/Home.jsx",
-                                lineNumber: 40,
-                                columnNumber: 13
-                            }, undefined),
-                            "Scroll to explore"
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/Home.jsx",
-                        lineNumber: 39,
-                        columnNumber: 11
+                        lineNumber: 52,
+                        columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
@@ -27644,12 +27699,14 @@ _c = Home;
 Home.defaultProps = {
     name: "Kaleem",
     title: "Android Developer",
-    email: ""
+    email: "",
+    profileImage: ""
 };
 Home.propTypes = {
     name: (0, _propTypesDefault.default).string.isRequired,
     title: (0, _propTypesDefault.default).string.isRequired,
-    email: (0, _propTypesDefault.default).string
+    email: (0, _propTypesDefault.default).string,
+    profileImage: (0, _propTypesDefault.default).string
 };
 exports.default = Home;
 var _c;
@@ -28567,21 +28624,37 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _projects = require("../data/projects");
 var _projectsDefault = parcelHelpers.interopDefault(_projects);
-const ProjectCard = ({ title, description, tags, github, playStore, apk, demo })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, screenshot })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "project-card",
         children: [
+            screenshot && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "project-cover",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: screenshot,
+                    alt: `${title} screenshot`,
+                    className: "project-cover-image"
+                }, void 0, false, {
+                    fileName: "src/Components/Portfolio.jsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/Components/Portfolio.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: title
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 12,
+                lineNumber: 17,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: description
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 13,
+                lineNumber: 18,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28591,12 +28664,12 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo })
                         children: tag
                     }, tag, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 17,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 15,
+                lineNumber: 20,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28610,7 +28683,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo })
                         children: "GitHub"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 25,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined),
                     playStore && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28621,7 +28694,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo })
                         children: "Play Store"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 30,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     apk && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28632,7 +28705,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo })
                         children: "Download APK"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 35,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined),
                     demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28643,13 +28716,13 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo })
                         children: "Demo \u25B6"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 40,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 23,
+                lineNumber: 28,
                 columnNumber: 5
             }, undefined)
         ]
@@ -28671,7 +28744,7 @@ const Portfolio = ()=>{
                     children: "My Work"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 52,
+                    lineNumber: 57,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -28679,7 +28752,7 @@ const Portfolio = ()=>{
                     children: "Featured Projects"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 53,
+                    lineNumber: 58,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28687,7 +28760,7 @@ const Portfolio = ()=>{
                     children: "A selection of Android apps I've designed, architected, and shipped."
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 54,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28696,23 +28769,23 @@ const Portfolio = ()=>{
                             ...project
                         }, project.title, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 60,
+                            lineNumber: 65,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 58,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Portfolio.jsx",
-            lineNumber: 51,
+            lineNumber: 56,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 50,
+        lineNumber: 55,
         columnNumber: 5
     }, undefined);
 };
@@ -28742,8 +28815,17 @@ $RefreshReg$(_c1, "Portfolio");
  *  - playStore    (string)  Full Play Store URL, or "" to hide the button
  *  - apk          (string)  Direct APK / GitHub Release URL, or "" to hide
  *  - demo         (string)  Demo video URL (YouTube, etc.), or "" to hide
+ *  - screenshot   (string)  Local image import for project preview
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _weatherNowJpg = require("../images/projects/weather-now.jpg");
+var _weatherNowJpgDefault = parcelHelpers.interopDefault(_weatherNowJpg);
+var _taskflowJpg = require("../images/projects/taskflow.jpg");
+var _taskflowJpgDefault = parcelHelpers.interopDefault(_taskflowJpg);
+var _spendsmartJpg = require("../images/projects/spendsmart.jpg");
+var _spendsmartJpgDefault = parcelHelpers.interopDefault(_spendsmartJpg);
+var _chatlinkJpg = require("../images/projects/chatlink.jpg");
+var _chatlinkJpgDefault = parcelHelpers.interopDefault(_chatlinkJpg);
 const projects = [
     {
         title: "Weather Now",
@@ -28758,7 +28840,8 @@ const projects = [
         github: "https://github.com/kaleem04/weather-now",
         playStore: "",
         apk: "",
-        demo: ""
+        demo: "",
+        screenshot: (0, _weatherNowJpgDefault.default)
     },
     {
         title: "TaskFlow",
@@ -28773,7 +28856,8 @@ const projects = [
         github: "https://github.com/kaleem04/taskflow",
         playStore: "",
         apk: "",
-        demo: ""
+        demo: "",
+        screenshot: (0, _taskflowJpgDefault.default)
     },
     {
         title: "SpendSmart",
@@ -28788,7 +28872,8 @@ const projects = [
         github: "https://github.com/kaleem04/spendsmart",
         playStore: "",
         apk: "",
-        demo: ""
+        demo: "",
+        screenshot: (0, _spendsmartJpgDefault.default)
     },
     {
         title: "ChatLink",
@@ -28803,12 +28888,13 @@ const projects = [
         github: "https://github.com/kaleem04/chatlink",
         playStore: "",
         apk: "",
-        demo: ""
+        demo: "",
+        screenshot: (0, _chatlinkJpgDefault.default)
     }
 ];
 exports.default = projects;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"gGXok":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../images/projects/weather-now.jpg":"in7aQ","../images/projects/taskflow.jpg":"4y4nf","../images/projects/spendsmart.jpg":"hnRCz","../images/projects/chatlink.jpg":"aOIkD"}],"in7aQ":[function() {},{}],"4y4nf":[function() {},{}],"hnRCz":[function() {},{}],"aOIkD":[function() {},{}],"gGXok":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0e72 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$0e72.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -29404,19 +29490,16 @@ const Footer = ({ name, email, gitHub, linkedIn, X })=>{
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     className: "btn btn-outline",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa6.FaXTwitter), {
-                                            className: "social-link-icon",
-                                            "aria-hidden": "true",
-                                            focusable: "false"
-                                        }, void 0, false, {
-                                            fileName: "src/Components/Footer.jsx",
-                                            lineNumber: 50,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        "X"
-                                    ]
-                                }, void 0, true, {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa6.FaXTwitter), {
+                                        className: "social-link-icon",
+                                        "aria-hidden": "true",
+                                        focusable: "false"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Footer.jsx",
+                                        lineNumber: 50,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
                                     fileName: "src/Components/Footer.jsx",
                                     lineNumber: 44,
                                     columnNumber: 15
@@ -89836,6 +89919,200 @@ function HiMiniAcademicCap(props) {
     })(props);
 }
 
-},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lW6qc":[function() {},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, null, null, "http://localhost:1234")
+},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lW6qc":[function() {},{}],"5HgaB":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$d117 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$d117.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d117.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _testimonials = require("../data/testimonials");
+var _testimonialsDefault = parcelHelpers.interopDefault(_testimonials);
+const Testimonials = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+        id: "testimonials",
+        className: "section testimonials",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "section-label",
+                    children: "Client Feedback"
+                }, void 0, false, {
+                    fileName: "src/Components/Testimonials.jsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    className: "section-title",
+                    children: "Testimonials"
+                }, void 0, false, {
+                    fileName: "src/Components/Testimonials.jsx",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "section-subtitle",
+                    children: "Real reviews from clients I have worked with across product launches, refactors, and Play Store releases."
+                }, void 0, false, {
+                    fileName: "src/Components/Testimonials.jsx",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "testimonials-grid",
+                    children: (0, _testimonialsDefault.default).map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {
+                            className: "testimonial-card",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "testimonial-rating",
+                                    "aria-label": `${item.rating} out of 5 stars`,
+                                    children: "\u2605".repeat(item.rating)
+                                }, void 0, false, {
+                                    fileName: "src/Components/Testimonials.jsx",
+                                    lineNumber: 18,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "testimonial-quote",
+                                    children: [
+                                        "\u201C",
+                                        item.quote,
+                                        "\u201D"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/Testimonials.jsx",
+                                    lineNumber: 21,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "testimonial-meta",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                            children: item.name
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Testimonials.jsx",
+                                            lineNumber: 23,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: [
+                                                item.role,
+                                                " \xb7 ",
+                                                item.company
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/Testimonials.jsx",
+                                            lineNumber: 24,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: item.project
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Testimonials.jsx",
+                                            lineNumber: 27,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/Testimonials.jsx",
+                                    lineNumber: 22,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, `${item.name}-${item.company}`, true, {
+                            fileName: "src/Components/Testimonials.jsx",
+                            lineNumber: 17,
+                            columnNumber: 13
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/Components/Testimonials.jsx",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/Components/Testimonials.jsx",
+            lineNumber: 7,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/Components/Testimonials.jsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Testimonials;
+exports.default = Testimonials;
+var _c;
+$RefreshReg$(_c, "Testimonials");
+
+  $parcel$ReactRefreshHelpers$d117.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../data/testimonials":"bopIB","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bopIB":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const testimonials = [
+    {
+        name: "Client Name 01 (Dummy)",
+        role: "Product Manager",
+        company: "Demo Company",
+        quote: "This is a placeholder review. Communication was excellent and delivery was on time across all milestones.",
+        project: "Sample Android App",
+        rating: 5
+    },
+    {
+        name: "Client Name 02 (Dummy)",
+        role: "Founder",
+        company: "Startup Alpha",
+        quote: "Placeholder testimonial text. The app quality improved quickly and the release process was smooth.",
+        project: "MVP Stabilization",
+        rating: 5
+    },
+    {
+        name: "Client Name 03 (Dummy)",
+        role: "Operations Lead",
+        company: "Growth Labs",
+        quote: "Dummy review for layout testing. Strong ownership and clear technical decisions from planning to delivery.",
+        project: "Field Service Platform",
+        rating: 4
+    },
+    {
+        name: "Client Name 04 (Dummy)",
+        role: "CTO",
+        company: "Beta Tech",
+        quote: "This is sample content only. Architecture refactor was structured and easy for our team to continue.",
+        project: "Legacy App Refactor",
+        rating: 5
+    },
+    {
+        name: "Client Name 05 (Dummy)",
+        role: "Marketing Lead",
+        company: "Nova Retail",
+        quote: "Placeholder text. Great collaboration, timely updates, and polished user experience improvements.",
+        project: "Ecommerce Mobile App",
+        rating: 4
+    },
+    {
+        name: "Client Name 06 (Dummy)",
+        role: "Project Coordinator",
+        company: "Orbit Systems",
+        quote: "Dummy review entry used for portfolio design preview. Integration work was handled efficiently.",
+        project: "Firebase Integration",
+        rating: 5
+    }
+];
+exports.default = testimonials;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5B8MN":[function() {},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=my_portfolio.31b563d9.js.map
