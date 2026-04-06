@@ -177,7 +177,7 @@
 
   // Only insert newRequire.load when it is actually used.
   // The code in this file is linted against ES5, so dynamic import is not allowed.
-  // INSERT_LOAD_HERE
+  function $parcel$resolve(url) {  url = importMap[url] || url;  return import.meta.resolve(distDir + url);}newRequire.resolve = $parcel$resolve;
 
   Object.defineProperty(newRequire, 'root', {
     get: function () {
@@ -24967,16 +24967,15 @@ var _about = require("./Components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _footer = require("./Components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
-var _kaleemHeroPng = require("./images/profile/kaleem-hero.png");
-var _kaleemHeroPngDefault = parcelHelpers.interopDefault(_kaleemHeroPng);
 var _stylesCss = require("./styles.css");
+const heroImage = new URL(require("f836d5fa7b8e295e")).href;
 /**
  * Update the values below with your own information.
  * Leave a field as an empty string ("") to hide that link.
  */ const siteProps = {
     name: "Kaleem",
     title: "Android Developer",
-    heroImage: (0, _kaleemHeroPngDefault.default),
+    heroImage,
     email: "Kaleem04.dev@gmail.com",
     gitHub: "kaleem04",
     linkedIn: "kaleem-ullah04",
@@ -25054,7 +25053,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Testimonials":"5HgaB","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","./images/profile/kaleem-hero.png":"5B8MN","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dmKJv":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Testimonials":"5HgaB","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","f836d5fa7b8e295e":"vHGjS"}],"dmKJv":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$beb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$beb5.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27536,20 +27535,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-const getAssetSrc = (asset)=>{
-    if (!asset) return "";
-    if (typeof asset === "string") return asset;
-    if (typeof asset === "object") {
-        if (typeof asset.src === "string") return asset.src;
-        if (typeof asset.default === "string") return asset.default;
-        if (asset.default && typeof asset.default === "object") {
-            if (typeof asset.default.src === "string") return asset.default.src;
-        }
-    }
-    return "";
-};
 const Home = ({ name, title, email, profileImage })=>{
-    const resolvedProfileImage = getAssetSrc(profileImage);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         id: "home",
         className: "hero",
@@ -27562,20 +27548,27 @@ const Home = ({ name, title, email, profileImage })=>{
                         className: "hero-content",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: " "
+                            }, void 0, false, {
+                                fileName: "src/Components/Home.jsx",
+                                lineNumber: 17,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "hero-badge",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: "\uD83E\uDD16"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 31,
+                                        lineNumber: 19,
                                         columnNumber: 15
                                     }, undefined),
                                     " Available for new projects"
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 30,
+                                lineNumber: 18,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27587,19 +27580,19 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: name
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 35,
+                                        lineNumber: 23,
                                         columnNumber: 28
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 36,
+                                        lineNumber: 24,
                                         columnNumber: 15
                                     }, undefined),
                                     title
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 34,
+                                lineNumber: 22,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27607,7 +27600,7 @@ const Home = ({ name, title, email, profileImage })=>{
                                 children: "I build fast, modern Android apps for startups and businesses \u2014 using Kotlin, Jetpack Compose, and Firebase. From idea to Play Store, I handle the full lifecycle."
                             }, void 0, false, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 40,
+                                lineNumber: 28,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27619,7 +27612,7 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: "View My Work"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 47,
+                                        lineNumber: 35,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27628,13 +27621,13 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: "Get in Touch"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 50,
+                                        lineNumber: 38,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 46,
+                                lineNumber: 34,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27644,70 +27637,69 @@ const Home = ({ name, title, email, profileImage })=>{
                                         className: "scroll-dot"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 56,
+                                        lineNumber: 44,
                                         columnNumber: 15
                                     }, undefined),
                                     "Scroll to explore"
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 55,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 29,
+                        lineNumber: 15,
                         columnNumber: 11
                     }, undefined),
-                    resolvedProfileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    profileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "hero-image-card",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: resolvedProfileImage,
+                            src: profileImage,
                             alt: `${name} portrait`,
                             className: "hero-image",
                             loading: "eager",
-                            decoding: "async",
-                            fetchPriority: "high"
+                            decoding: "async"
                         }, void 0, false, {
                             fileName: "src/Components/Home.jsx",
-                            lineNumber: 63,
+                            lineNumber: 51,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 62,
+                        lineNumber: 50,
                         columnNumber: 13
                     }, undefined),
-                    !resolvedProfileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    !profileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "hero-image-card",
                         "aria-hidden": "true",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "hero-image hero-image-placeholder"
                         }, void 0, false, {
                             fileName: "src/Components/Home.jsx",
-                            lineNumber: 75,
+                            lineNumber: 62,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 74,
+                        lineNumber: 61,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 28,
+                lineNumber: 14,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/Components/Home.jsx",
-            lineNumber: 27,
+            lineNumber: 13,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Home.jsx",
-        lineNumber: 26,
+        lineNumber: 12,
         columnNumber: 5
     }, undefined);
 };
@@ -27722,10 +27714,7 @@ Home.propTypes = {
     name: (0, _propTypesDefault.default).string.isRequired,
     title: (0, _propTypesDefault.default).string.isRequired,
     email: (0, _propTypesDefault.default).string,
-    profileImage: (0, _propTypesDefault.default).oneOfType([
-        (0, _propTypesDefault.default).string,
-        (0, _propTypesDefault.default).object
-    ])
+    profileImage: (0, _propTypesDefault.default).string
 };
 exports.default = Home;
 var _c;
@@ -28643,23 +28632,10 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _projects = require("../data/projects");
 var _projectsDefault = parcelHelpers.interopDefault(_projects);
-const getAssetSrc = (asset)=>{
-    if (!asset) return "";
-    if (typeof asset === "string") return asset;
-    if (typeof asset === "object") {
-        if (typeof asset.src === "string") return asset.src;
-        if (typeof asset.default === "string") return asset.default;
-        if (asset.default && typeof asset.default === "object") {
-            if (typeof asset.default.src === "string") return asset.default.src;
-        }
-    }
-    return "";
-};
 const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, screenshot, screenshots })=>{
-    const screenshotSrc = getAssetSrc(screenshot);
-    const normalizedScreenshots = Array.isArray(screenshots) ? screenshots.map(getAssetSrc).filter(Boolean) : [];
-    const gallery = normalizedScreenshots.length > 0 ? normalizedScreenshots : screenshotSrc ? [
-        screenshotSrc
+    const normalizedScreenshots = Array.isArray(screenshots) ? screenshots.filter(Boolean) : [];
+    const gallery = normalizedScreenshots.length > 0 ? normalizedScreenshots : screenshot ? [
+        screenshot
     ] : [];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "project-card",
@@ -28679,31 +28655,31 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                             decoding: "async"
                         }, `${title}-shot-${index}`, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 36,
+                            lineNumber: 22,
                             columnNumber: 15
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 34,
+                    lineNumber: 20,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 33,
+                lineNumber: 19,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: title
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 48,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: description
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 49,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28713,12 +28689,12 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: tag
                     }, tag, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 53,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 51,
+                lineNumber: 37,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28732,7 +28708,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "GitHub"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 61,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, undefined),
                     playStore && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28743,7 +28719,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Play Store"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 66,
+                        lineNumber: 52,
                         columnNumber: 11
                     }, undefined),
                     apk && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28754,7 +28730,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Download APK"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 71,
+                        lineNumber: 57,
                         columnNumber: 11
                     }, undefined),
                     demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28765,19 +28741,19 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Demo \u25B6"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 76,
+                        lineNumber: 62,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 59,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 31,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined);
 };
@@ -28794,7 +28770,7 @@ const Portfolio = ()=>{
                     children: "My Work"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 89,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -28802,7 +28778,7 @@ const Portfolio = ()=>{
                     children: "Featured Projects"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 90,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28810,7 +28786,7 @@ const Portfolio = ()=>{
                     children: "A selection of Android apps I've designed, architected, and shipped."
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 91,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28819,23 +28795,23 @@ const Portfolio = ()=>{
                             ...project
                         }, project.title, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 97,
+                            lineNumber: 83,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 95,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Portfolio.jsx",
-            lineNumber: 88,
+            lineNumber: 74,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 87,
+        lineNumber: 73,
         columnNumber: 5
     }, undefined);
 };
@@ -28868,22 +28844,14 @@ $RefreshReg$(_c1, "Portfolio");
  *  - screenshot   (string)  Local image import for project preview
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _weatherNowOriginalJpg = require("../images/projects/weather-now-original.jpg");
-var _weatherNowOriginalJpgDefault = parcelHelpers.interopDefault(_weatherNowOriginalJpg);
-var _weatherNowJpg = require("../images/projects/weather-now.jpg");
-var _weatherNowJpgDefault = parcelHelpers.interopDefault(_weatherNowJpg);
-var _taskflowOriginalJpg = require("../images/projects/taskflow-original.jpg");
-var _taskflowOriginalJpgDefault = parcelHelpers.interopDefault(_taskflowOriginalJpg);
-var _taskflowJpg = require("../images/projects/taskflow.jpg");
-var _taskflowJpgDefault = parcelHelpers.interopDefault(_taskflowJpg);
-var _spendsmartOriginalJpg = require("../images/projects/spendsmart-original.jpg");
-var _spendsmartOriginalJpgDefault = parcelHelpers.interopDefault(_spendsmartOriginalJpg);
-var _spendsmartJpg = require("../images/projects/spendsmart.jpg");
-var _spendsmartJpgDefault = parcelHelpers.interopDefault(_spendsmartJpg);
-var _chatlinkOriginalJpg = require("../images/projects/chatlink-original.jpg");
-var _chatlinkOriginalJpgDefault = parcelHelpers.interopDefault(_chatlinkOriginalJpg);
-var _chatlinkJpg = require("../images/projects/chatlink.jpg");
-var _chatlinkJpgDefault = parcelHelpers.interopDefault(_chatlinkJpg);
+const weatherNowShot = new URL(require("43351a0e141e5206")).href;
+const weatherNowAlt = new URL(require("96563bd5039bb167")).href;
+const taskFlowShot = new URL(require("c1bdd445a24dad68")).href;
+const taskFlowAlt = new URL(require("1d19ae73db5283e6")).href;
+const spendSmartShot = new URL(require("d0a87e3ad4178bc3")).href;
+const spendSmartAlt = new URL(require("19306f62fd598103")).href;
+const chatLinkShot = new URL(require("1fdbf02c565a5bf2")).href;
+const chatLinkAlt = new URL(require("db4f6585c66958aa")).href;
 const projects = [
     {
         title: "Weather Now",
@@ -28899,10 +28867,10 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _weatherNowOriginalJpgDefault.default),
+        screenshot: weatherNowShot,
         screenshots: [
-            (0, _weatherNowJpgDefault.default),
-            (0, _weatherNowOriginalJpgDefault.default)
+            weatherNowAlt,
+            weatherNowShot
         ]
     },
     {
@@ -28919,10 +28887,10 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _taskflowOriginalJpgDefault.default),
+        screenshot: taskFlowShot,
         screenshots: [
-            (0, _taskflowJpgDefault.default),
-            (0, _taskflowOriginalJpgDefault.default)
+            taskFlowAlt,
+            taskFlowShot
         ]
     },
     {
@@ -28939,10 +28907,10 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _spendsmartOriginalJpgDefault.default),
+        screenshot: spendSmartShot,
         screenshots: [
-            (0, _spendsmartJpgDefault.default),
-            (0, _spendsmartOriginalJpgDefault.default)
+            spendSmartAlt,
+            spendSmartShot
         ]
     },
     {
@@ -28959,16 +28927,40 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _chatlinkOriginalJpgDefault.default),
+        screenshot: chatLinkShot,
         screenshots: [
-            (0, _chatlinkJpgDefault.default),
-            (0, _chatlinkOriginalJpgDefault.default)
+            chatLinkAlt,
+            chatLinkShot
         ]
     }
 ];
 exports.default = projects;
 
-},{"../images/projects/weather-now-original.jpg":"inVdo","../images/projects/taskflow-original.jpg":"25S8J","../images/projects/spendsmart-original.jpg":"aGFK9","../images/projects/chatlink-original.jpg":"7nlb0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../images/projects/weather-now.jpg":"in7aQ","../images/projects/taskflow.jpg":"4y4nf","../images/projects/spendsmart.jpg":"hnRCz","../images/projects/chatlink.jpg":"aOIkD"}],"inVdo":[function() {},{}],"25S8J":[function() {},{}],"aGFK9":[function() {},{}],"7nlb0":[function() {},{}],"in7aQ":[function() {},{}],"4y4nf":[function() {},{}],"hnRCz":[function() {},{}],"aOIkD":[function() {},{}],"5HgaB":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","43351a0e141e5206":"6J3nk","96563bd5039bb167":"jtaq0","c1bdd445a24dad68":"g1S9X","1d19ae73db5283e6":"7fTKu","d0a87e3ad4178bc3":"dVUlK","19306f62fd598103":"7ute1","1fdbf02c565a5bf2":"mvTLo","db4f6585c66958aa":"j2bSY"}],"6J3nk":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("weather-now-original.dc5fa2a5.jpg") + "?" + Date.now();
+
+},{}],"jtaq0":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("weather-now.d3328dc7.jpg") + "?" + Date.now();
+
+},{}],"g1S9X":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("taskflow-original.ef097bba.jpg") + "?" + Date.now();
+
+},{}],"7fTKu":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("taskflow.cc8deaf6.jpg") + "?" + Date.now();
+
+},{}],"dVUlK":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("spendsmart-original.cded3049.jpg") + "?" + Date.now();
+
+},{}],"7ute1":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("spendsmart.e9e632b7.jpg") + "?" + Date.now();
+
+},{}],"mvTLo":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("chatlink-original.5b2e360b.jpg") + "?" + Date.now();
+
+},{}],"j2bSY":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("chatlink.69c9afb4.jpg") + "?" + Date.now();
+
+},{}],"5HgaB":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d117 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$d117.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -90187,6 +90179,9 @@ function HiMiniAcademicCap(props) {
     })(props);
 }
 
-},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5B8MN":[function() {},{}],"lW6qc":[function() {},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, null, null, "http://localhost:1234")
+},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lW6qc":[function() {},{}],"vHGjS":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("kaleem-hero.2135e90f.png") + "?" + Date.now();
+
+},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, "./", "/", "http://localhost:1234")
 
 //# sourceMappingURL=my_portfolio.31b563d9.js.map
