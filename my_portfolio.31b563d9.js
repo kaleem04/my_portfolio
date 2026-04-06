@@ -25053,7 +25053,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Testimonials":"5HgaB","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","f836d5fa7b8e295e":"vHGjS"}],"dmKJv":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Testimonials":"5HgaB","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","f836d5fa7b8e295e":"vHGjS","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dmKJv":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$beb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$beb5.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27548,27 +27548,20 @@ const Home = ({ name, title, email, profileImage })=>{
                         className: "hero-content",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: " "
-                            }, void 0, false, {
-                                fileName: "src/Components/Home.jsx",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "hero-badge",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: "\uD83E\uDD16"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 19,
+                                        lineNumber: 17,
                                         columnNumber: 15
                                     }, undefined),
                                     " Available for new projects"
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 18,
+                                lineNumber: 16,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27580,19 +27573,19 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: name
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 23,
+                                        lineNumber: 21,
                                         columnNumber: 28
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 24,
+                                        lineNumber: 22,
                                         columnNumber: 15
                                     }, undefined),
                                     title
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 22,
+                                lineNumber: 20,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27600,7 +27593,7 @@ const Home = ({ name, title, email, profileImage })=>{
                                 children: "I build fast, modern Android apps for startups and businesses \u2014 using Kotlin, Jetpack Compose, and Firebase. From idea to Play Store, I handle the full lifecycle."
                             }, void 0, false, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 28,
+                                lineNumber: 26,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27612,7 +27605,7 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: "View My Work"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 35,
+                                        lineNumber: 33,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27621,13 +27614,13 @@ const Home = ({ name, title, email, profileImage })=>{
                                         children: "Get in Touch"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 36,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 34,
+                                lineNumber: 32,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27637,14 +27630,14 @@ const Home = ({ name, title, email, profileImage })=>{
                                         className: "scroll-dot"
                                     }, void 0, false, {
                                         fileName: "src/Components/Home.jsx",
-                                        lineNumber: 44,
+                                        lineNumber: 42,
                                         columnNumber: 15
                                     }, undefined),
                                     "Scroll to explore"
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Home.jsx",
-                                lineNumber: 43,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, undefined)
                         ]
@@ -27663,12 +27656,12 @@ const Home = ({ name, title, email, profileImage })=>{
                             decoding: "async"
                         }, void 0, false, {
                             fileName: "src/Components/Home.jsx",
-                            lineNumber: 51,
+                            lineNumber: 49,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 50,
+                        lineNumber: 48,
                         columnNumber: 13
                     }, undefined),
                     !profileImage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27678,12 +27671,12 @@ const Home = ({ name, title, email, profileImage })=>{
                             className: "hero-image hero-image-placeholder"
                         }, void 0, false, {
                             fileName: "src/Components/Home.jsx",
-                            lineNumber: 62,
+                            lineNumber: 60,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 61,
+                        lineNumber: 59,
                         columnNumber: 13
                     }, undefined)
                 ]
@@ -28936,7 +28929,7 @@ const projects = [
 ];
 exports.default = projects;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","43351a0e141e5206":"6J3nk","96563bd5039bb167":"jtaq0","c1bdd445a24dad68":"g1S9X","1d19ae73db5283e6":"7fTKu","d0a87e3ad4178bc3":"dVUlK","19306f62fd598103":"7ute1","1fdbf02c565a5bf2":"mvTLo","db4f6585c66958aa":"j2bSY"}],"6J3nk":[function(require,module,exports,__globalThis) {
+},{"43351a0e141e5206":"6J3nk","96563bd5039bb167":"jtaq0","c1bdd445a24dad68":"g1S9X","1d19ae73db5283e6":"7fTKu","d0a87e3ad4178bc3":"dVUlK","19306f62fd598103":"7ute1","1fdbf02c565a5bf2":"mvTLo","db4f6585c66958aa":"j2bSY","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"6J3nk":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("weather-now-original.dc5fa2a5.jpg") + "?" + Date.now();
 
 },{}],"jtaq0":[function(require,module,exports,__globalThis) {
@@ -90179,9 +90172,9 @@ function HiMiniAcademicCap(props) {
     })(props);
 }
 
-},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lW6qc":[function() {},{}],"vHGjS":[function(require,module,exports,__globalThis) {
+},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"vHGjS":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("kaleem-hero.2135e90f.png") + "?" + Date.now();
 
-},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, "./", "/", "http://localhost:1234")
+},{}],"lW6qc":[function() {},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, "./", "/", "http://localhost:1234")
 
 //# sourceMappingURL=my_portfolio.31b563d9.js.map
