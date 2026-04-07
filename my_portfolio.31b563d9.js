@@ -24967,8 +24967,8 @@ var _about = require("./Components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _footer = require("./Components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
-var _kaleemHeroPng = require("./images/profile/kaleem-hero.png");
-var _kaleemHeroPngDefault = parcelHelpers.interopDefault(_kaleemHeroPng);
+var _kaleemHeroJpg = require("./images/profile/kaleem-hero.jpg");
+var _kaleemHeroJpgDefault = parcelHelpers.interopDefault(_kaleemHeroJpg);
 var _stylesCss = require("./styles.css");
 /**
  * Update the values below with your own information.
@@ -24976,7 +24976,7 @@ var _stylesCss = require("./styles.css");
  */ const siteProps = {
     name: "Kaleem",
     title: "Android Developer",
-    heroImage: (0, _kaleemHeroPngDefault.default),
+    heroImage: (0, _kaleemHeroJpgDefault.default),
     email: "Kaleem04.dev@gmail.com",
     gitHub: "kaleem04",
     linkedIn: "kaleem-ullah04",
@@ -25054,7 +25054,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Testimonials":"5HgaB","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","./images/profile/kaleem-hero.png":"5B8MN","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dmKJv":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Components/Header":"dmKJv","./Components/Home":"ehZFn","./Components/Services":"asIRf","./Components/Portfolio":"28kHR","./Components/Testimonials":"5HgaB","./Components/Skills":"gGXok","./Components/About":"Cjjls","./Components/Footer":"6CuBd","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./images/profile/kaleem-hero.jpg":"6UicN"}],"dmKJv":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$beb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$beb5.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -28652,8 +28652,9 @@ const getAssetSrc = (asset)=>{
     }
     return "";
 };
-const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, screenshot })=>{
+const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, screenshot, screenshots })=>{
     const screenshotSrc = getAssetSrc(screenshot);
+    const galleryImages = Array.isArray(screenshots) ? screenshots.map(getAssetSrc).filter(Boolean) : [];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "project-card",
         children: [
@@ -28665,27 +28666,45 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                     className: "project-cover-image"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 30,
+                    lineNumber: 33,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 29,
+                lineNumber: 32,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: title
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 33,
+                lineNumber: 36,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: description
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 34,
+                lineNumber: 37,
                 columnNumber: 7
+            }, undefined),
+            galleryImages.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "project-gallery",
+                "aria-label": `${title} gallery`,
+                children: galleryImages.map((imageSrc, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: imageSrc,
+                        alt: `${title} screen ${index + 1}`,
+                        className: "project-gallery-image",
+                        loading: "lazy"
+                    }, `${title}-shot-${index + 1}`, false, {
+                        fileName: "src/Components/Portfolio.jsx",
+                        lineNumber: 42,
+                        columnNumber: 13
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/Components/Portfolio.jsx",
+                lineNumber: 40,
+                columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "project-tags",
@@ -28694,12 +28713,12 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: tag
                     }, tag, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 38,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 36,
+                lineNumber: 53,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28713,7 +28732,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "GitHub"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 46,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, undefined),
                     playStore && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28724,7 +28743,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Play Store"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 51,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, undefined),
                     apk && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28735,7 +28754,7 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Download APK"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 56,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, undefined),
                     demo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -28746,19 +28765,19 @@ const ProjectCard = ({ title, description, tags, github, playStore, apk, demo, s
                         children: "Demo \u25B6"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 61,
+                        lineNumber: 78,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 44,
+                lineNumber: 61,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 27,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
@@ -28775,7 +28794,7 @@ const Portfolio = ()=>{
                     children: "My Work"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 74,
+                    lineNumber: 91,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -28783,7 +28802,7 @@ const Portfolio = ()=>{
                     children: "Featured Projects"
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 75,
+                    lineNumber: 92,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28791,7 +28810,7 @@ const Portfolio = ()=>{
                     children: "A selection of Android apps I've designed, architected, and shipped."
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 76,
+                    lineNumber: 93,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28800,23 +28819,23 @@ const Portfolio = ()=>{
                             ...project
                         }, project.title, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 82,
+                            lineNumber: 99,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/Components/Portfolio.jsx",
-                    lineNumber: 80,
+                    lineNumber: 97,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Portfolio.jsx",
-            lineNumber: 73,
+            lineNumber: 90,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 72,
+        lineNumber: 89,
         columnNumber: 5
     }, undefined);
 };
@@ -28851,8 +28870,12 @@ $RefreshReg$(_c1, "Portfolio");
 parcelHelpers.defineInteropFlag(exports);
 var _weatherNowOriginalJpg = require("../images/projects/weather-now-original.jpg");
 var _weatherNowOriginalJpgDefault = parcelHelpers.interopDefault(_weatherNowOriginalJpg);
+var _weatherNowJpg = require("../images/projects/weather-now.jpg");
+var _weatherNowJpgDefault = parcelHelpers.interopDefault(_weatherNowJpg);
 var _taskflowOriginalJpg = require("../images/projects/taskflow-original.jpg");
 var _taskflowOriginalJpgDefault = parcelHelpers.interopDefault(_taskflowOriginalJpg);
+var _taskflowJpg = require("../images/projects/taskflow.jpg");
+var _taskflowJpgDefault = parcelHelpers.interopDefault(_taskflowJpg);
 var _spendsmartOriginalJpg = require("../images/projects/spendsmart-original.jpg");
 var _spendsmartOriginalJpgDefault = parcelHelpers.interopDefault(_spendsmartOriginalJpg);
 var _chatlinkOriginalJpg = require("../images/projects/chatlink-original.jpg");
@@ -28872,7 +28895,11 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _weatherNowOriginalJpgDefault.default)
+        screenshot: (0, _weatherNowOriginalJpgDefault.default),
+        screenshots: [
+            (0, _weatherNowOriginalJpgDefault.default),
+            (0, _weatherNowJpgDefault.default)
+        ]
     },
     {
         title: "TaskFlow",
@@ -28888,7 +28915,11 @@ const projects = [
         playStore: "",
         apk: "",
         demo: "",
-        screenshot: (0, _taskflowOriginalJpgDefault.default)
+        screenshot: (0, _taskflowOriginalJpgDefault.default),
+        screenshots: [
+            (0, _taskflowOriginalJpgDefault.default),
+            (0, _taskflowJpgDefault.default)
+        ]
     },
     {
         title: "SpendSmart",
@@ -28925,7 +28956,7 @@ const projects = [
 ];
 exports.default = projects;
 
-},{"../images/projects/weather-now-original.jpg":"inVdo","../images/projects/taskflow-original.jpg":"25S8J","../images/projects/spendsmart-original.jpg":"aGFK9","../images/projects/chatlink-original.jpg":"7nlb0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"inVdo":[function() {},{}],"25S8J":[function() {},{}],"aGFK9":[function() {},{}],"7nlb0":[function() {},{}],"5HgaB":[function(require,module,exports,__globalThis) {
+},{"../images/projects/weather-now-original.jpg":"inVdo","../images/projects/taskflow-original.jpg":"25S8J","../images/projects/spendsmart-original.jpg":"aGFK9","../images/projects/chatlink-original.jpg":"7nlb0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../images/projects/weather-now.jpg":"in7aQ","../images/projects/taskflow.jpg":"4y4nf"}],"inVdo":[function() {},{}],"25S8J":[function() {},{}],"aGFK9":[function() {},{}],"7nlb0":[function() {},{}],"in7aQ":[function() {},{}],"4y4nf":[function() {},{}],"5HgaB":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d117 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$d117.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -90144,6 +90175,6 @@ function HiMiniAcademicCap(props) {
     })(props);
 }
 
-},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5B8MN":[function() {},{}],"lW6qc":[function() {},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, null, null, "http://localhost:1234")
+},{"../lib/index.mjs":"8gE95","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lW6qc":[function() {},{}],"6UicN":[function() {},{}]},["5j6Kf","a0t4e"], "a0t4e", "parcelRequire05e8", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=my_portfolio.31b563d9.js.map
