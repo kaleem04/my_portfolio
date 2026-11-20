@@ -3,13 +3,13 @@
 const scenarios = {
   form: {
     label: "SAMPLE QUOTE REQUEST",
-    inquiry: "“Can I get a quote for a garage door repair?”",
+    inquiry: "“My furnace stopped working and it's freezing. Can someone come today?”",
     firstStep: "Capture service request",
     result: "Example result: the customer gets a confirmation, and your team gets the repair request."
   },
   assistant: {
     label: "SAMPLE CHAT QUESTION",
-    inquiry: "“Do you repair garage doors in Round Rock?”",
+    inquiry: "“Do you offer same-day furnace repair in my area?”",
     firstStep: "Answer an FAQ and collect contact details",
     result: "Example result: the assistant confirms coverage, and your team gets the customer’s details."
   }
