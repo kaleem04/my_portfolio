@@ -1,0 +1,25 @@
+:root {
+  --paper:#F9F8F5; --surface:#FFFFFF; --ink:#14201C; --ink-muted:#5B6660;
+  --teal-700:#0F5C55; --teal-800:#0B443F; --teal-50:#E8F1EF;
+  --amber-400:#E8A33D; --line:#DAD6CB;
+  --success:#1E7A4D; --error:#B42318; --focus:#0F5C55;
+  --font-display:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --text-sm:.875rem; --text-base:1.0625rem;
+  --h1:clamp(2.25rem,1.6rem + 3.2vw,4rem);
+  --h2:clamp(1.75rem,1.4rem + 1.6vw,2.5rem);
+  --h3:clamp(1.25rem,1.1rem + .6vw,1.5rem);
+  --s-1:.25rem; --s-2:.5rem; --s-3:.75rem; --s-4:1rem; --s-6:1.5rem;
+  --s-8:2rem; --s-12:3rem; --s-16:4rem; --s-24:6rem;
+  --r-sm:6px; --r-md:12px; --r-lg:20px; --r-pill:999px;
+  --shadow-1:0 1px 2px rgba(20,32,28,.06); --shadow-2:0 8px 24px rgba(20,32,28,.10);
+  --dur-fast:150ms; --dur-base:250ms; --ease:cubic-bezier(.2,.7,.2,1);
+  --container:1120px; --reading:62ch;
+  --border:1px; --focus-size:2px; --tap:44px; --portrait:12rem;
+  --header-offset:5rem; --panel-min:17rem; --field-min:12rem;
+  --hero-space:clamp(var(--s-12), 8vw, var(--s-24));
+}
+@media (prefers-reduced-motion:reduce) {
+  :root { --dur-fast:0ms; --dur-base:0ms; }
+}
